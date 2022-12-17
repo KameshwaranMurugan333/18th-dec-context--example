@@ -1,12 +1,11 @@
 import './App.css';
-import { Forms } from './Forms';
-
+import { CompA } from './CompA';
 
 function App() {
 
   return (
     <div className="App">
-        <Forms />
+      <CompA />
     </div>
   );
 }
