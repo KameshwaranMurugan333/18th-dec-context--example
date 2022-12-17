@@ -1,6 +1,6 @@
 import React from "react";
 
-const MyFunctionalComponent = () => {
+const MyFunctionalComponent = (props) => {
 
     const [state, setState] = React.useState({ count: 0, name: "kamesh" });
 
@@ -21,7 +21,8 @@ const MyFunctionalComponent = () => {
         setSwitch(switchStatus);
     }
 
-    const updateArrCounter = (index) => {
+    const updateArrCounter = (index, event) => {
+        console.log("INDEX", index);
         let newArr = arr;
         newArr[index].count = newArr[index].count + 1;
         setArr([...newArr]);
@@ -35,8 +36,13 @@ const MyFunctionalComponent = () => {
         <button onClick={toogleSwitch}>ToogleSwitch</button>
 
         <p>Arr: {JSON.stringify(arr)}</p>
-        <button onClick={(e) => updateArrCounter(0)}>Update Kamesh Counter</button>
+        <button onClick={(e) => updateArrCounter(0, e)}>Update Kamesh Counter</button>
         <button onClick={(e) => updateArrCounter(1)}>Update Prasad Counter</button>
+
+        <h2>My Props:</h2>
+        <p>Count: {props.count}</p>
+        <p>Name: {props.name}</p>
+        <p>DOB: {props.dob}</p>
     </div>
 }
 

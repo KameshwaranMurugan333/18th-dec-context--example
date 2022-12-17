@@ -18,6 +18,11 @@ class MyClassComponent extends React.Component {
         return <div>
             <p>Count: {this.state.count}</p>
             <button onClick={this.incrementCounter}>Increment</button>
+
+            <h2>My Props:</h2>
+            <p>Count: {this.props.count}</p>
+            <p>Name: {this.props.name}</p>
+            <p>DOB: {this.props.dob}</p>
         </div>
     }
 }
