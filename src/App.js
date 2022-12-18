@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
+import { FancyBorder } from './FancyBorder';
 import StateUsage from './StateUsage';
 
 function App() {
 
   return (
     <div className="App">
-      <StateUsage />
+      <FancyBorder color="red">
+        <p>I Need Fancy Border</p>
+      </FancyBorder>
     </div>
   );
 }
