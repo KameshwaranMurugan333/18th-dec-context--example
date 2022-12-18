@@ -1,5 +1,6 @@
 import React from "react";
 import { CompB } from "./CompB";
+import { CountContext } from "./context";
 
 export const CompA = (props) => {
 
@@ -11,6 +12,8 @@ export const CompA = (props) => {
 
     return <div>
         <h1>CompA</h1>
-        <CompB count={count} incrementCounter={incrementCounter}/>
+        <CountContext.Provider value={{ count, incrementCounter }}>
+            <CompB />
+        </CountContext.Provider>
     </div>
 }

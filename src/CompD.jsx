@@ -6,6 +6,6 @@ export const CompD = (props) => {
     return <div>
         <h1>CompD</h1>
         <CompE />
-        <CompF count={props.count} incrementCounter={props.incrementCounter}/>
+        <CompF />
     </div>
 }
