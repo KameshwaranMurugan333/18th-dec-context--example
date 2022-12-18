@@ -1,11 +1,15 @@
+import React from 'react';
 import './App.css';
-import { CompA } from './CompA';
+import LifeCycleMethod from "./LifeCycleMethod";
 
 function App() {
 
+  const [hideShowLCM, setHideShowLCM] = React.useState(true);
+
   return (
     <div className="App">
-      <CompA />
+      {hideShowLCM && <LifeCycleMethod favcol={"white"} />}
+      <button onClick={(e) => setHideShowLCM(!hideShowLCM)} >Toogle Comp</button>
     </div>
   );
 }
